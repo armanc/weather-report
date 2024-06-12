@@ -1,6 +1,12 @@
 import prompts from "prompts";
 import fetch from "node-fetch";
 
+import config from './config.json' assert { type: "json" };
+const apiKey: string = config.apiKey;
+console.log(apiKey);
+
+
+
 type City = {
     lat: number;
     lon: number;
@@ -14,7 +20,6 @@ type MeteoData = {
 type WeatherReportResponse = {
     main: MeteoData
 };
-
 
 (async () => {
     const response = await prompts({

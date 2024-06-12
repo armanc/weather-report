@@ -9,6 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import prompts from "prompts";
 import fetch from "node-fetch";
+import config from './config.json' assert { type: "json" };
+const apiKey = config.apiKey;
+console.log(apiKey);
 (() => __awaiter(void 0, void 0, void 0, function* () {
     const response = yield prompts({
         type: 'text',
